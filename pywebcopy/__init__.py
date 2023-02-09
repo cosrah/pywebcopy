@@ -110,7 +110,7 @@ def save_page(url,
         warnings.warn(
             "Opening in browser is not supported when threading is enabled!")
         open_in_browser = False
-    page.save_complete(pop=open_in_browser)
+    return page.save_complete(pop=open_in_browser)
 
 
 save_web_page = save_webpage = save_page
@@ -161,4 +161,4 @@ def save_website(url,
         warnings.warn(
             "Opening in browser is not supported when threading is enabled!")
         open_in_browser = False
-    crawler.save_complete(pop=open_in_browser)
+    return crawler.save_complete(pop=open_in_browser)
